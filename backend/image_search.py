@@ -2,9 +2,10 @@ import os
 from dotenv import load_dotenv
 from serpapi import GoogleSearch
 
-
-
-def image_search(query, api_key):
+def image_search(query):
+    load_dotenv()
+    api_key = os.getenv("GOOGLE_KEY")
+    
     params = {
         "q": query,
         "tbm": "isch",
@@ -26,8 +27,6 @@ def image_search(query, api_key):
     return image_links
 
 def main():
-    load_dotenv()
-
     api_key = os.getenv("GOOGLE_KEY")
     q = input("Enter your query\n")
     for x in image_search(q, api_key):
