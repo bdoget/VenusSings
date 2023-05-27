@@ -14,7 +14,7 @@ def get_time():
 @app.route('/lyrics/<trackID>')
 def get_lyrics(trackID):
     try: 
-        return get_lyrics(str(trackID))
+        return get_lyrics(trackID)
     except Exception as e:
         return "Oops"
 
