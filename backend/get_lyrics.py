@@ -19,7 +19,13 @@ def get_lyrics(track_id):
     if data["syncType"] != "LINE_SYNCED":
         raise Exception("Error: get_lyrics.py: Lyrics are not LINE_SYNCED")
     
-    return data['lines']
+    return clean_lyrics(data['lines'])
+
+def clean_lyrics(arr):
+    for db in arr:
+        del db['endTimeMs']
+        del db['syllables']
+    return arr
 
 
 if __name__ == "__main__":
