@@ -17,3 +17,4 @@ Interactive Karaoke Machine
 
 pip install google-search-results
 pip install dotenv
+pip install requests
