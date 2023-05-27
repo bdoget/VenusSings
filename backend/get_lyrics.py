@@ -1,4 +1,3 @@
-
 import requests
 import json
 
@@ -13,6 +12,7 @@ def get_lyrics(track_id):
     
     if f.status_code != 200:
         raise Exception("Error: get_lyrics.py: get_lyrics: status code not 200")
+    
     data = json.loads(f.text)
     if data["error"] == True:
         raise Exception("Error: get_lyrics.py: No Lyrics Found")
