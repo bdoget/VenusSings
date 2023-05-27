@@ -24,7 +24,7 @@ def image_search(query, api_key):
 def main():
     api_key = input("Enter your API key\n")
     q = input("Enter your query\n")
-    for x in imagesearch(q, api_key):
+    for x in image_search(q, api_key):
         print(x)
 
 if __name__ == "__main__":
