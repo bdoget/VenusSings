@@ -13,3 +13,7 @@ Interactive Karaoke Machine
 1. hi
 2. hi
 3. hi
+
+
+pip install google-search-results
+pip install dotenv
