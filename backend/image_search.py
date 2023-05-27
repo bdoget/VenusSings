@@ -29,7 +29,7 @@ def image_search(query):
 def main():
     api_key = os.getenv("GOOGLE_KEY")
     q = input("Enter your query\n")
-    for x in image_search(q, api_key):
+    for x in image_search(q):
         print(x)
 
 if __name__ == "__main__":
