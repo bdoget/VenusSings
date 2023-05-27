@@ -4,8 +4,8 @@ from serpapi import GoogleSearch
 
 def image_search(query):
     load_dotenv()
-    api_key = os.getenv("GOOGLE_KEY")
-    
+    api_key = os.getenv("SERPAPI_KEY")
+
     params = {
         "q": query,
         "tbm": "isch",

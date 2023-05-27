@@ -14,7 +14,8 @@ Interactive Karaoke Machine
 2. hi
 3. hi
 
-
+pip install flask
 pip install google-search-results
 pip install dotenv
 pip install requests
+
