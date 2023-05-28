@@ -35,6 +35,16 @@
     font-weight: bold;
     text-align: center;
     z-index: 2; /* Make sure the text is on top of the images */
+    -webkit-animation: fade 4s infinite;
+    animation: fade 4s infinite;
+  }
+
+  #text1 {
+    animation-delay: 0s;
+  }
+
+  #text2 {
+    animation-delay: 2s;
   }
 
   .container {

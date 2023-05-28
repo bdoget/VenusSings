@@ -1,39 +1,28 @@
 import logo from "./logo.svg";
 import "./Karaoke.css";
 import { useState } from "react";
+import Carousel from 'react-bootstrap/Carousel';
 
 
 function Karaoke(){
+    const FakeData = [{lyric: "First lyrics", image: "./images/umbrella.jpg"}, {lyric: "Second lyrics", image: ""}];
+    const [index, setIndex] = useState(0);
+    const handleSelect = (selectedIndex) => {setIndex(selectedIndex);
+    };
+
     return(
         <div className="App">
             <div className="App-header">
                 <div className="container">
-                    <div className='pic' id='pic2' />
+                    {FakeData.map(data => (
+                        div 
+                    ))}
+                    {/* <div className='pic' id='pic2' />
                     <div className='pic' id='pic1' />
                 </div>
                 <div>
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <div class="d-block w-100">
-                            <h3>First slide</h3>
-                            <p>first lyric</p>
-                        </div>
-                        </div>
-                        <div class="carousel-item">
-                        <div class="d-block w-100">
-                            <h3>Second slide</h3>
-                            <p>second lyric</p>
-                        </div>
-                        </div>
-                        <div class="carousel-item">
-                        <div class="d-block w-100">
-                            <h3>Third slide</h3>
-                            <p>third lyric</p>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+                    <div className="text-overlay" id='text1'>first lyrics</div>
+                    <div className="text-overlay" id='text2'>second lyrics</div> */}
                 </div>
             </div>
         </div>
