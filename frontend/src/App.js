@@ -15,6 +15,7 @@ function App() {
     fetch("/subtitles/biking-frankocean").then((res) =>
       res.json().then((data) => {
         // Setting a data from api
+        console.log(data);
         setdata(data);
       }
     ));

@@ -35,8 +35,8 @@
     font-weight: bold;
     text-align: center;
     z-index: 2; /* Make sure the text is on top of the images */
-    -webkit-animation: fade 4s infinite;
-    animation: fade 4s infinite;
+    -webkit-animation: fade 16s infinite;
+    animation: fade 16s infinite;
   }
 
   #text1 {
@@ -44,7 +44,15 @@
   }
 
   #text2 {
-    animation-delay: 2s;
+    animation-delay: 4s;
+  }
+
+  #text3 {
+    animation-delay: 8s;
+  }
+
+  #text4 {
+    animation-delay: 12s;
   }
 
   .container {
@@ -65,8 +73,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-animation: fade 24s infinite;
-    animation: fade 24s infinite;
+    -webkit-animation: fade 32s infinite;
+    animation: fade 32s infinite;
   }
 
   #pic1 {
@@ -78,19 +86,32 @@
     animation-delay: 8s;
   }
 
+  #pic3 {
+    background-image: url("./images/friends.jpg");
+    animation-delay: 16s;
+  }
+
+  #pic4 {
+    background-image: url("./images/Ella.jpg");
+    animation-delay: 24s;
+  }
+
   @-webkit-keyframes fade {
     0% {
       opacity: 1;
     }
-    /* 20% {
+    20% {
       opacity: 1;
-    } */
-    50% {
+    }
+    34% {
       opacity: 0;
     }
-    /* 88% {
+    60% {
       opacity: 0;
-    } */
+    }
+    88% {
+      opacity: 0;
+    }
     100% {
       opacity: 1;
     }
@@ -99,15 +120,18 @@
     0% {
       opacity: 1;
     }
-    /* 20% {
+    20% {
       opacity: 1;
-    } */
-    50% {
+    }
+    34% {
       opacity: 0;
     }
-    /* 88% {
+    60% {
       opacity: 0;
-    } */
+    }
+    88% {
+      opacity: 0;
+    }
     100% {
       opacity: 1;
     }

@@ -13,9 +13,16 @@ function Karaoke(){
         <div className="App">
             <div className="App-header">
                 <div className="container">
-                        <div> </div>
+                    <div className="pic" id="pic4"></div>
+                    <div className="pic" id="pic3"></div>
+                    <div className="pic" id="pic2"></div>
+                    <div className="pic" id="pic1"></div>
                 </div>
                 <div>
+                    <div className="text-overlay" id='text1'>First Lyrics</div>
+                    <div className="text-overlay" id='text2'>Second Lyrics</div>
+                    <div className="text-overlay" id='text3'>Third Lyrics</div>
+                    <div className="text-overlay" id='text4'>Fourth Lyrics</div>
                 </div>
             </div>
         </div>
