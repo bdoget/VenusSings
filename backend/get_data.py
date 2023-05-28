@@ -31,15 +31,17 @@ def get_data2(track_id,max_images,query="",additional_query=""):
 
     n = len(data)
     if n < max_images:
-        for interval in data:
+        for idx,interval in enumerate(data):
             temp = interval['words'] + f" {query} {additional_query}"
             print(temp)
             interval['image'] = get_image_results(temp,1)[0]
+            interval['id'] = idx
             # interval['transition'] = True
             break
     elif max_images <= 0:
-        for interval in data:
+        for idx,interval in enumerate(data):
             interval['image'] = "https://arctype.com/blog/content/images/2021/04/NULL.jpg"
+            interval['id'] = idx
             # interval['transition'] = True
     else:
         remaining_imgs = max_images
@@ -55,6 +57,7 @@ def get_data2(track_id,max_images,query="",additional_query=""):
                 remaining_imgs -= 1
 
             interval['image'] = last_image[0]
+            interval['id'] = idx
             # interval['transition'] = True
             last_image.pop(0)
         

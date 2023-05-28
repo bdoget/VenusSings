@@ -29,7 +29,7 @@ def get_lyrics_from_query(query):
 
 from get_lyrics import get_lyrics
 from spotify_id import search_tracks
-from get_subtitles import get_data3
+from get_data import get_data3
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
