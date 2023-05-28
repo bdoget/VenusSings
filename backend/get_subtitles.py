@@ -35,30 +35,28 @@ def get_data2(track_id,max_images,query="",additional_query=""):
             temp = interval['words'] + f" {query} {additional_query}"
             print(temp)
             interval['image'] = get_image_results(temp,1)[0]
-            interval['transition'] = True
+            # interval['transition'] = True
             break
     elif max_images <= 0:
         for interval in data:
             interval['image'] = "https://arctype.com/blog/content/images/2021/04/NULL.jpg"
-            interval['transition'] = True
+            # interval['transition'] = True
     else:
         remaining_imgs = max_images
         last_image = []
         for idx, interval in enumerate(data):
-            remaining_ints = n - idx
-            
+
             chance = random.randint(1, math.ceil((n+1)/max_images))
+
             if last_image == [] and (chance == 1 or remaining_imgs > 0):
                 temp = interval['words'] + f" {query} {additional_query}"
                 print(temp)
-                last_image = get_image_results(temp,n)
-
-                interval['image'] = last_image[0]
-                interval['transition'] = True
+                last_image = get_image_results(temp,n-idx)
                 remaining_imgs -= 1
-            else:
-                interval['image'] = last_image[idx % len(last_image)]
-                interval['transition'] = True
+
+            interval['image'] = last_image[0]
+            # interval['transition'] = True
+            last_image.pop(0)
         
     return data
     

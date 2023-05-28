@@ -21,15 +21,15 @@ def get_lyrics(trackID):
 @app.route('/subtitles/<query>')    # QUERY = "SONG-ARTIST"
 def get_lyrics_from_query(query):
     try: 
-        trackID = search_tracks(query)
-        return get_lyrics(trackID)
+        return get_data3(query)
     except Exception as e:
         return "Oops"
-
+    
 
 
 from get_lyrics import get_lyrics
 from spotify_id import search_tracks
+from get_subtitles import get_data3
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
