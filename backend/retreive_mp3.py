@@ -1,19 +1,13 @@
-import pafy
+from pytube import YouTube
+import os
+import ffmpy
 
-pafy.set_api_key("AIzaSyATQgehc_FxWS8mWyWYxk79_-CrUgiXMIQ")
+link = "https://www.youtube.com/watch?v=HuQ0ni6AlrU"
 
-#query = input("Query: ")
-# search_results = "https://www.youtube.com/watch?v=qVSy4O3k3u4"
-# if search_results:
-#     first_video = search_results[0]
-#     url = first_video.watchv_url
-#     print("Website URL:", url)
-#     video = pafy.new(url)
-#     audio_stream = video.getbestaudio()
-#     audio_stream.download(filepath="./bin/audio.mp3")
-# else:
-#     print("No search results found.")
+yt = YouTube(link)
 
-video = pafy.new("https://www.youtube.com/watch?v=qVSy4O3k3u4")
-audio_stream = video.getbestaudio()
-audio_stream.download(filepath="./bin/audio.mp3")
+downloader = yt.streams.filter(progressive = True, file_extension = "mp4").first()
+
+test = downloader.download(output_path = "./bin", filename = "video.mp4")
+ff =ffmpy.FFmpeg(inputs={test: None},outputs={'./bin/audio.mp3': None})
+ff.run()

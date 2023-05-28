@@ -20,4 +20,5 @@ pip install dotenv
 pip install requests
 pip install Google-Images-Search
 pip install curses
-
+pip install ffmpy
+pip install pytube
