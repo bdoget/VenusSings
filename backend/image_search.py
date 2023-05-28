@@ -17,7 +17,8 @@ def image_search(query):
     search = GoogleSearch(params)
     response = search.get_dict()
     image_links = []
-    
+    print(response)
+
     if "images_results" in response:
         for result in response["images_results"]:
             image_url = result["original"]
